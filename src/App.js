@@ -19,23 +19,23 @@ import {auth, createUserProfileDocument} from '../src/components/firebase/fireba
    unsubscribeFromAuth = null;
 
    componentDidMount(){
-    //  this.unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
-    //    if(userAuth){
-    //   const userRef = await createUserProfileDocument(userAuth);
-    //   console.log('userRef'+userRef);
+     this.unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
+       if(userAuth){
+      const userRef = await createUserProfileDocument(userAuth);
+      console.log('userRef'+userRef);
 
-    //   userRef.onSnapshot(snapshot => {
-    //     this.setState({
-    //       currentUser: {
-    //         id: snapshot.id,
-    //         ...snapshot.data()
-    //       }
-    //     })
-    //   })
-    //    }
-    //   //  console.log(user);
-    //   this.setState({currentUser: userAuth});
-    //  })
+      userRef.onSnapshot(snapshot => {
+        this.setState({
+          currentUser: {
+            id: snapshot.id,
+            ...snapshot.data()
+          }
+        })
+      })
+       }
+      //  console.log(user);
+      this.setState({currentUser: userAuth});
+     })
    
    }
 
