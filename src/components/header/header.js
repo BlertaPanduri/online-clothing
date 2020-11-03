@@ -6,7 +6,7 @@ import './header.styles.scss';
 import {auth} from '../firebase/firebase.utils.js';
 import CartIcon from '../cart-icon/cart-icon';
 import CartDropdown from '../cart-dropdown/cart-dropdown';
-
+/** Menyja per navigim */
 const Header = ({currentUser, hidden}) => (
 <div className='header'>
     <Link to='/'>
@@ -18,11 +18,7 @@ const Header = ({currentUser, hidden}) => (
        SHOP
     </Link>
     </div>
-    <div className='option'>
-    <Link to='/shop'>
-       CONTACT
-    </Link>
-    </div>
+  
 {
     currentUser ?
     <div className='option' onClick={() => auth.signOut()}>SIGN OUT</div>

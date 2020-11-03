@@ -13,7 +13,8 @@ import {setCurrentUser} from './redux/user/user.actions';
  class App extends React.Component{
    
    unsubscribeFromAuth = null;
-
+  /** Nese je authenticated mu kriju ne databaze ni dokument qe e permban perdoruesin dhe
+   *  nese s'je authenticated me bo unsubscribe */
    componentDidMount(){
     const {setCurrentUser} = this.props;
      this.unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
@@ -54,6 +55,11 @@ import {setCurrentUser} from './redux/user/user.actions';
  }
 
 }
+
+/** redux
+ * mapStateToProps - e marrim vetine e state-it qe na nevojitet
+ * mapDispatchToProps  - i marrim metodat qe na nevojiten
+ */
 const mapStateToProps = ({user}) => ({
 currentUser: user.currentUser
 })

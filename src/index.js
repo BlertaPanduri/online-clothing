@@ -8,10 +8,13 @@ import * as serviceWorker from './serviceWorker';
 
 import store from './redux/store';
 
+/**Provider store - me lidh me store te redux
+ * BrowserRouter - me perdore routing
+ */
 
 ReactDOM.render(
-  <Provider store={store}>
-  <BrowserRouter>
+  <Provider store={store}>  
+  <BrowserRouter> 
     <App />
   </BrowserRouter>
   </Provider>,

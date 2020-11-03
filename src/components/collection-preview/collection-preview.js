@@ -1,7 +1,7 @@
 import React from 'react';
 import './collection-preview.scss';
 import CollectionItem from '../collection-item/collection-item';
-
+/** Me na qit 4 artikujt ne ni rresht */
 const CollectionPreview =  ({title, items}) => (
     <div className ="collection-preview">
         <h1 className ="title">{title.toUpperCase()}</h1>

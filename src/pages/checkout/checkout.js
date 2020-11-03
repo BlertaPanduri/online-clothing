@@ -5,7 +5,7 @@ import CheckoutItem from '../../components/checkout-item/checkout-item';
 import {createStructuredSelector} from 'reselect';
 import{selectCartItems, selectCartTotal} from '../../redux/cart/cart.selectors';
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button';
-
+/** Faqja mbasi i zgjedhim artikujt edhe dojme me bo pagesen */
 const CheckoutPage = ({cartItems, total}) => (
     <div className='checkout-page'>
         <div className='header'>

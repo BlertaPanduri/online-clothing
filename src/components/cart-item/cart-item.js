@@ -1,6 +1,6 @@
 import React from 'react';
 import './cart-item.styles.scss';
-
+/**Artikulli qe dojme me ble qe e vendosim ne shporte */
 const CartItem = ({item: {imageUrl, price, name, quantity}}) => (
     <div className='cart-item'>
         <img src={imageUrl} alt='item' />

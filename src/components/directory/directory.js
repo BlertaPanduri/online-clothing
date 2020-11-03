@@ -1,7 +1,7 @@
 import React from 'react';
 import './directory.styles.scss';
 import MenuItem from  '../menu-item/menu-item'
-
+/** Komponenti me artikuj si meny e navigimit qe e kena lidh te Homepage */
  
 
 class Directory extends React.Component{

@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-
+/** Konfigurimi qe merret nga databaza mbasi ta krijojme */
 
 const config={
     apiKey: "AIzaSyADPE9FnU1hGysl6s_YREdBK-P_2UGDj_k",
@@ -14,6 +14,7 @@ const config={
     measurementId: "G-DMM6W0R899"
 };
 
+/** Me  kriju ni profil tperdoruesit ne databaze */
 export const createUserProfileDocument = async (userAuth, additionalData) => {
     if(!userAuth) return;
 
@@ -49,7 +50,8 @@ export const firestore = firebase.firestore();
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({prompt: 'select_account'});
 
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+/** na mundeson mu kyc me ane te google */
+export const signInWithGoogle = () => auth.signInWithPopup(provider); //dritarja qe na del per me zgidh emailin
 
 export default firebase;
 

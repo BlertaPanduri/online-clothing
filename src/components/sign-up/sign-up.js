@@ -6,7 +6,7 @@ import { auth, createUserProfileDocument } from '../firebase/firebase.utils.js';
 
 import './sign-up.styles.scss';
 
-
+/** Komponenti per regjistrim  */
 class SignUp extends React.Component {
     constructor() {
         super();
@@ -18,6 +18,7 @@ class SignUp extends React.Component {
             confirmPassword: ''
         }
     }
+    /**Mu regjistru ne databaze */
 
     handleSubmit = async event => {
         event.preventDefault();

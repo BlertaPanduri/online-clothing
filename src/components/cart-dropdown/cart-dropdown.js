@@ -7,7 +7,7 @@ import './cart-dropdown.styles.scss';
 import CartItem from '../cart-item/cart-item';
 
 
-
+/** Lista ku regjistrohen artikujt qe i zgjedhim */
 
 const CartDropdown = ({cartItems, history}) => (
     <div className='cart-dropdown'>
